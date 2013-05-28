@@ -94,7 +94,7 @@ end
 def build_index_erb
   index = <<EOT
 <script type="text/x-handlebars">
-  Ember App
+  Success: You are running Ember!
   {{outlet}}
 </script>
 EOT
