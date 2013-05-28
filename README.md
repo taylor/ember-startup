@@ -29,7 +29,7 @@ You should see 'Success: You are running Ember!'
 
 ###Have fun.
 
-*Note: the rake file is very simple and assumes Linux or Mac shell commands are available to unzip bootstrap.zip*
+*Note: the rake file is very simple and assumes Linux or Mac shell commands are available to unzip bootstrap.zip and run wget*
 
 
 ## Starting Over
