@@ -4,7 +4,9 @@ Create your project and get the rakefile:
 
     mkdir my-ember-project
     cd my-ember-project
-    wget https://raw.github.com/jfreeze/ember-startup/master/rakefile
+    wget http://bit.ly/EmberStartup
+
+(The full URL is: https://raw.github.com/jfreeze/ember-startup/master/rakefile)
 
 Then run the setup:
 
