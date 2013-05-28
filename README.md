@@ -1,9 +1,13 @@
-## Helper to quickly create a startup ember app
+## Helper to quickly create a startup Ember app
 
-Use this rakefile
+Create your project and get the rakefile:
 
     mkdir my-ember-project
     cd my-ember-project
+    wget https://raw.github.com/jfreeze/ember-startup/master/rakefile
+
+Then run the setup:
+
     rake ember:setup
 
 The ember:setup command creates a sinatra project and a basic ember app.
