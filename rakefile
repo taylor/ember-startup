@@ -13,6 +13,10 @@ namespace :ember do
   end
 end
 
+# Links to other Ember builds can be found at: http://builds.emberjs.com
+
+EMBER_LATEST          = "ember-latest.js"
+EMBER_DATA_LATEST     = "ember-data-latest.js"
 EMBER_BUILD_URL       = "http://builds.emberjs.com.s3.amazonaws.com"
 NORMALIZE_CSS_URL     = "http://necolas.github.com/normalize.css/2.1.2/normalize.css"
 BOOTSTRAP_ZIP_URL     = "http://twitter.github.io/bootstrap/assets/bootstrap.zip"
@@ -167,11 +171,11 @@ def setup_ember
   wget_js_libs MOMENT_JS_URL
   wget_js_libs SHOWDOWN_JS_URL
 
-  wget_latest "ember-latest.js"
-  wget_latest "ember-data-latest.js"
+  wget_latest EMBER_LATEST
+  wget_latest EMBER_DATA_LATEST
 
-  ember_file      = get_ember_latest_move_and_rename("ember-latest.js")
-  ember_data_file = get_ember_latest_move_and_rename("ember-data-latest.js")
+  ember_file      = get_ember_latest_move_and_rename(EMBER_LATEST)
+  ember_data_file = get_ember_latest_move_and_rename(EMBER_DATA_LATEST)
 
   setup_bootstrap_css
   setup_sinatra
