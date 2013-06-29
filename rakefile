@@ -15,15 +15,15 @@ end
 
 # Links to other Ember builds can be found at: http://builds.emberjs.com
 
-EMBER_LATEST          = "ember-latest.js"
-EMBER_DATA_LATEST     = "ember-data-latest.js"
-EMBER_BUILD_URL       = "http://builds.emberjs.com.s3.amazonaws.com"
-NORMALIZE_CSS_URL     = "http://necolas.github.com/normalize.css/2.1.2/normalize.css"
-BOOTSTRAP_ZIP_URL     = "http://twitter.github.io/bootstrap/assets/bootstrap.zip"
-JQUERY_191_URL        = "http://code.jquery.com/jquery-1.9.1.min.js"
-HANDLEBARS_RC4_JS_URL = "https://raw.github.com/wycats/handlebars.js/1.0.0-rc.4/dist/handlebars.js"
-MOMENT_JS_URL         = "https://raw.github.com/timrwood/moment/2.0.0/moment.js"
-SHOWDOWN_JS_URL       = "https://raw.github.com/coreyti/showdown/master/src/showdown.js"
+EMBER_LATEST            = "ember-latest.js"
+EMBER_DATA_LATEST       = "ember-data-latest.js"
+EMBER_BUILD_URL         = "http://builds.emberjs.com.s3.amazonaws.com"
+NORMALIZE_CSS_URL       = "http://necolas.github.com/normalize.css/2.1.2/normalize.css"
+BOOTSTRAP_ZIP_URL       = "http://twitter.github.io/bootstrap/assets/bootstrap.zip"
+JQUERY_1_10_URL         = "http://code.jquery.com/jquery-1.10.1.js"
+HANDLEBARS_1_0_0_JS_URL = "https://raw.github.com/wycats/handlebars.js/1.0.0/dist/handlebars.js"
+MOMENT_JS_URL           = "https://raw.github.com/timrwood/moment/2.0.0/moment.js"
+SHOWDOWN_JS_URL         = "https://raw.github.com/coreyti/showdown/master/src/showdown.js"
 
 def create_directories
   FileUtils.mkdir_p 'views'
@@ -118,7 +118,7 @@ def build_layout_erb(ember_js_file, ember_data_js_file)
 </head>
 <body>
   <%= yield %>
-  <script src="js/libs/jquery-1.9.1.min.js"></script>
+  <script src="js/libs/jquery-1.10.1.js"></script>
   <script src="js/libs/handlebars.js"></script>
   <script src="js/libs/#{ember_js_file}"></script>
   <script src="js/libs/#{ember_data_js_file}"></script>
@@ -168,8 +168,8 @@ def setup_ember
   wget_css NORMALIZE_CSS_URL
   wget_css BOOTSTRAP_ZIP_URL
 
-  wget_js_libs JQUERY_191_URL
-  wget_js_libs HANDLEBARS_RC4_JS_URL
+  wget_js_libs JQUERY_1_10_URL
+  wget_js_libs HANDLEBARS_1_0_0_JS_URL
   wget_js_libs MOMENT_JS_URL
   wget_js_libs SHOWDOWN_JS_URL
 
