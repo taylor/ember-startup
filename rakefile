@@ -121,9 +121,9 @@ def build_layout_erb(ember_js_file, ember_data_js_file)
   <script src="js/libs/jquery-1.10.1.js"></script>
   <script src="js/libs/handlebars.js"></script>
   <script src="js/libs/#{ember_js_file}"></script>
-  <script src="js/libs/#{ember_data_js_file}"></script>
-  <script src="js/libs/moment.js"></script>
-  <script src="js/libs/showdown.js"></script>
+  <!-- <script src="js/libs/#{ember_data_js_file}"></script> -->
+  <!-- <script src="js/libs/moment.js"></script> -->
+  <!-- <script src="js/libs/showdown.js"></script> -->
   <script src="js/app.js"></script>
 </body>
 </html>
@@ -139,9 +139,12 @@ end
 def build_app_js
   app = <<EOT
 App = Ember.Application.create({
-    LOG_TRANSITIONS: true,
-    LOG_VIEW_LOOKUPS: true,
-    LOG_ACTIVE_GENERATION: true
+    LOG_BINDINGS                  : true,
+    LOG_TRANSITIONS               : true,
+    LOG_TRANSITIONS_INTERNAL      : true, // Feel free to turn this off 
+    LOG_VIEW_LOOKUPS              : true,
+    LOG_ACTIVE_GENERATION         : true,
+    LOG_STACKTRACE_ON_DEPRECATION : true 
 });
 EOT
   File.open("public/js/app.js", "w+") { |f| f.puts app }
