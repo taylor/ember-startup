@@ -150,6 +150,13 @@ App = Ember.Application.create({
 App.Router.reopen({
   // location: 'history'
 });
+
+// Needed when loading ember-data
+App.Store = DS.Store.extend({
+  // adapter: DS.RESTAdapter.extend({
+  //     url: 'http://localhost:3000'
+  // })
+});
 EOT
   File.open("public/js/app.js", "w+") { |f| f.puts app }
 end
