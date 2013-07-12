@@ -151,6 +151,11 @@ App.Router.reopen({
   // location: 'history'
 });
 
+//App.Router.map(function() {
+//  this.route("about");
+//  this.route("favorites", { path: "/favs" });
+//});
+
 // Needed when loading ember-data
 //App.Store = DS.Store.extend({
   // adapter: DS.RESTAdapter.extend({
